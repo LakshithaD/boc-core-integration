@@ -14,10 +14,10 @@ import java.math.BigDecimal;
 @Component
 public class XmlLib {
 
-    @Value("boc.login.id")
+    @Value("${boc.login.id}")
     private String loginId;
 
-    @Value("boc.password")
+    @Value("${boc.password}")
     private String password;
 
     public String buildBocCoreXmlString(AccountDetail fromAcct, AccountDetail toAcct, BigDecimal amount) {
