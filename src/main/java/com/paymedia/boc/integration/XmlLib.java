@@ -10,6 +10,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.StringWriter;
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Component
 public class XmlLib {
@@ -91,12 +92,13 @@ public class XmlLib {
 
             //------------------------ MonSvcRq --------------------------------
             MonSvcRq monSvcRq = new MonSvcRq();
-            monSvcRq.setRqUID("020842f8-ade0-4fd3-8b97-a806be2d3dec");
+            String redUid = UUID.randomUUID().toString();
+            monSvcRq.setRqUID(redUid);
             monSvcRq.setSpName("FiservICBS");
 
             //---------------------- PSAppXferAddRq -----------------
                 PSAppXferAddRq psAppXferAddRq = new PSAppXferAddRq();
-                psAppXferAddRq.setRqUID("020842f8-ade0-4fd3-8b97-a806be2d3dec");
+                psAppXferAddRq.setRqUID(redUid);
 
                     TrnCommon trnCommon = new TrnCommon();
                         EffectiveDate effectiveDate = new EffectiveDate();
